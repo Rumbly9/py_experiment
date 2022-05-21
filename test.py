@@ -76,10 +76,71 @@ for fruit in fruits :
 
 # Finding largest number from list
 numbers = [12, 3, 55, 23, 19, 79]
-cont = 0
+cont = None
 for i in numbers :
-    if cont < i :
-        cont = i
+    if cont == None :
+        cont = numbers[0]
+    else :
+        if cont < i :
+            cont = i
 print("The largest number is", cont)
 
 len(numbers)
+
+# Finding smallest number from list
+nums = [32, 55, 34, 66, 15, 23]
+cont2 = None
+for i in nums :
+    if cont2 == None :
+        cont2 = nums[0]
+    else :
+        if cont2 > i :
+            cont2 = i
+print("The smallest number is", cont2)
+
+# Counting list
+numero = [12, 34, 123, 44, 12, 66, 7878, 1]
+
+counter = 0
+total = 0
+print("Before", counter)
+
+for i in numero :
+    counter = counter + 1
+    total = total + i
+    print(counter, i, total)
+
+print("After", counter, total, total/counter)
+
+# Boolean number finder
+numo = [1, 3, 54, 7, 67, 5, 32]
+
+index = -1
+finder = False
+for i in numo :
+    index = index + 1
+    if i == 5 :
+        finder = True
+        break
+print("Found number 5 in numo list at index number", index)
+
+#######################
+
+device = "phone"
+print("n" in device)
+if "o" in device:
+    print("Found it!")
+
+# Finder
+
+item = "laptop"
+def item_finder(x) :
+    if item.find(x) != -1 :
+        print("The letter that you search is at index number", item.find(x))
+    elif item.find(x) == -1 :
+        print("Sorry, the letter that you search is not in the item")
+
+# Replace
+
+def item_replacer(old, new, count = 99999) :
+    return item.replace(old, new, count)
