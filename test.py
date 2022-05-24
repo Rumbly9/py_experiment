@@ -144,3 +144,13 @@ def item_finder(x) :
 
 def item_replacer(old, new, count = 99999) :
     return item.replace(old, new, count)
+
+######################
+
+str = "X-DSPAM-Confidence: 0.8475"
+
+colpos = str.find(":")
+tgt = str[colpos+2:]
+val = float(tgt)
+count = val * 1.23
+print(colpos, tgt, count)
