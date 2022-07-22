@@ -1,3 +1,7 @@
+import code
+from operator import concat
+
+
 a = 5
 b = 10
 def math() :
@@ -114,6 +118,9 @@ print("After", counter, total, total/counter)
 
 # Boolean number finder
 numo = [1, 3, 54, 7, 67, 5, 32]
+numo2 = [3, 5, 100, 25]
+concatList = numo + numo2
+print(concatList)
 
 index = -1
 finder = False
@@ -149,8 +156,29 @@ def item_replacer(old, new, count = 99999) :
 
 str = "X-DSPAM-Confidence: 0.8475"
 
+dashPos = str.find("-")
+endDashPos = str.find("-", dashPos+1)
+codeFind = str[dashPos+1 : endDashPos]
+print(dashPos, endDashPos, codeFind)
+
 colpos = str.find(":")
 tgt = str[colpos+2:]
 val = float(tgt)
 count = val * 1.23
 print(colpos, tgt, count)
+
+str2 = "From: stephen.marquard@uct.ac.za Sat Jan 5"
+
+atPos = str2.find("@")
+spacePos = str2.find(" ", atPos)
+domainFind = str2[atPos+1 : spacePos]
+print(atPos, spacePos, domainFind)
+
+#############################
+
+friends = ["John", "Barbara", "Frank"]
+
+for i in range(len(friends)) :
+    friend = friends[i]
+    print(f"Hello {friend}!") #<<<<<<<< This is f-strings template literals
+
