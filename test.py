@@ -119,7 +119,7 @@ print("After", counter, total, total/counter)
 # Boolean number finder
 numo = [1, 3, 54, 7, 67, 5, 32]
 numo2 = [3, 5, 100, 25]
-concatList = numo + numo2
+concatList = numo + numo2 #<<<<<<<< This is concatenation of lists
 print(concatList)
 
 index = -1
@@ -182,3 +182,31 @@ for i in range(len(friends)) :
     friend = friends[i]
     print(f"Hello {friend}!") #<<<<<<<< This is f-strings template literals
 
+#-----making list from scratch-----#
+
+listMaker = list()
+listMaker.append("Hello")
+listMaker.append(25)
+listMaker.append(True)
+print(listMaker)
+listMaker.insert(1, "Jumbo")
+listMaker.reverse()
+print(listMaker)
+
+#-----Counting average using list-----#
+
+listCont = list()
+while True :
+    inpt = input("Enter a number: ")
+    if inpt.lower() == "done" :
+        break
+    val = float(inpt)
+    listCont.append(val)
+average = sum(listCont) / len(listCont)
+print(average)
+
+#-----splitting strings-----#
+
+words = "Hello there, Kenobi"
+splitter = words.split() #<<<<< split without splitter annotation will use whitespace as default
+print(splitter)
